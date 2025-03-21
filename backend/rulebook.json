@@ -1,0 +1,32 @@
+{
+    "high_transaction_amount": {
+        "enabled": true,
+        "threshold": 500000,
+        "fraud_score": 0.7,
+        "reason": "High transaction amount"
+    },
+    "multiple_transactions_short_time": {
+        "enabled": true,
+        "limit": 3,
+        "time_window": "1 minute",
+        "fraud_score": 0.8,
+        "reason": "Multiple transactions in a short time"
+    },
+    "blacklisted_users": {
+        "enabled": true,
+        "blacklist": ["payer123", "payee456"],
+        "fraud_score": 1.0,
+        "reason": "Blacklisted payer/payee"
+    },
+    "high_risk_payment_mode": {
+        "enabled": true,
+        "modes": ["anonymous_wallet", "cryptocurrency"],
+        "fraud_score": 0.5,
+        "reason": "High-risk payment mode"
+    },
+    "unusual_location": {
+        "enabled": true,
+        "fraud_score": 0.6,
+        "reason": "Unusual transaction location"
+    }
+}
